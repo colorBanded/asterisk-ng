@@ -1,0 +1,124 @@
+[gd_scene load_steps=10 format=3 uid="uid://d37sdww6uryqk"]
+
+[ext_resource type="Texture2D" uid="uid://d1xdana6kqubf" path="res://images/menuBG.png" id="1_con2f"]
+[ext_resource type="Script" uid="uid://c757qj14mc527" path="res://scripts/menu.gd" id="1_i6lef"]
+[ext_resource type="Script" uid="uid://biadbjjr5uxc7" path="res://scripts/menu_blk.gd" id="2_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://dgrq8h6jojybb" path="res://images/menuLogo.png" id="2_mhnvy"]
+[ext_resource type="Texture2D" uid="uid://cempoeirlfuc2" path="res://images/menusecond.png" id="3_4ytvr"]
+[ext_resource type="Script" uid="uid://qciuem4i4r00" path="res://scripts/menu_fg.gd" id="4_mhnvy"]
+[ext_resource type="Script" uid="uid://bftfum861vmgp" path="res://scripts/menu_logo.gd" id="6_g3eks"]
+[ext_resource type="FontFile" uid="uid://brscic2q5cbna" path="res://assets/FOT-NewRodin Pro DB.otf" id="7_13sgg"]
+[ext_resource type="Script" uid="uid://br22vgtow8xjr" path="res://scripts/h_box_container.gd" id="7_v86rl"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i6lef")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-44, -5)
+
+[node name="MenuBLK" type="Sprite2D" parent="Node2D"]
+texture_filter = 1
+position = Vector2(-42, -76)
+scale = Vector2(5.34, 5.34)
+texture = ExtResource("1_con2f")
+centered = false
+offset = Vector2(0, 36.09)
+script = ExtResource("2_4ytvr")
+
+[node name="MenuRed" type="Sprite2D" parent="Node2D"]
+texture_filter = 1
+position = Vector2(-39, -18)
+scale = Vector2(5.34, 5.34)
+texture = ExtResource("3_4ytvr")
+centered = false
+flip_v = true
+script = ExtResource("4_mhnvy")
+
+[node name="MenuLOGO" type="Sprite2D" parent="Node2D"]
+texture_filter = 1
+position = Vector2(-81, -15)
+scale = Vector2(5.34, 5.34)
+texture = ExtResource("2_mhnvy")
+centered = false
+script = ExtResource("6_g3eks")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 404.0
+offset_top = -220.0
+offset_right = 404.0
+offset_bottom = -189.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="buttonplay" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_13sgg")
+text = "   play   "
+script = ExtResource("7_v86rl")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 534.0
+offset_top = -220.0
+offset_right = 534.0
+offset_bottom = -189.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="buttonsettings" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_13sgg")
+text = "   settings   "
+script = ExtResource("7_v86rl")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 697.0
+offset_top = -220.0
+offset_right = 697.0
+offset_bottom = -189.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="buttonexit" type="Button" parent="HBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_13sgg")
+text = "   quit   "
+script = ExtResource("7_v86rl")
+
+[connection signal="pressed" from="HBoxContainer/buttonplay" to="." method="_on_buttonplay_pressed"]
+[connection signal="pressed" from="HBoxContainer2/buttonsettings" to="." method="_on_buttonsettings_pressed"]
+[connection signal="pressed" from="HBoxContainer3/buttonexit" to="." method="_on_buttonexit_pressed"]
