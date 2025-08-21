@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://nnvktsnarp15"]
+[gd_scene load_steps=7 format=3 uid="uid://nnvktsnarp15"]
 
 [ext_resource type="Texture2D" uid="uid://d1xdana6kqubf" path="res://images/menuBG.png" id="1_a2v1q"]
 [ext_resource type="FontFile" uid="uid://brscic2q5cbna" path="res://assets/FOT-NewRodin Pro DB.otf" id="1_cjm32"]
 [ext_resource type="Script" uid="uid://cumkh8sdw37s1" path="res://scripts/gamechoose.gd" id="1_yavud"]
 [ext_resource type="Script" uid="uid://qciuem4i4r00" path="res://scripts/menu_fg.gd" id="2_ir7r2"]
 [ext_resource type="Script" uid="uid://dkcqfhew3g57y" path="res://scripts/btns/btn.gd" id="5_fjb6h"]
+[ext_resource type="FontFile" uid="uid://bocrogyb3eljc" path="res://assets/FOT-NewRodin Pro EB.otf" id="6_ijey6"]
 
 [node name="Gamechoose" type="Control"]
 layout_mode = 3
@@ -70,6 +71,7 @@ layout_mode = 2
 [node name="ng" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_cjm32")
+theme_override_font_sizes/font_size = 26
 text = "*ng"
 flat = true
 alignment = 0
@@ -81,6 +83,7 @@ layout_mode = 2
 [node name="tris" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_cjm32")
+theme_override_font_sizes/font_size = 26
 text = "*tris"
 flat = true
 alignment = 0
@@ -92,6 +95,7 @@ layout_mode = 2
 [node name="tale" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer3"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_cjm32")
+theme_override_font_sizes/font_size = 26
 text = "*tale"
 flat = true
 alignment = 0
@@ -120,7 +124,7 @@ layout_mode = 2
 [node name="modetitle" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer"]
 layout_direction = 4
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_cjm32")
+theme_override_fonts/font = ExtResource("6_ijey6")
 theme_override_font_sizes/font_size = 48
 text = "TITLE"
 
