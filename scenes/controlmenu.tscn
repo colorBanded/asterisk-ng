@@ -1,0 +1,326 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2n7y87sfqcyt"]
+
+[ext_resource type="FontFile" uid="uid://bocrogyb3eljc" path="res://assets/FOT-NewRodin Pro EB.otf" id="1_v051c"]
+[ext_resource type="Script" uid="uid://207mw6cryhoh" path="res://scripts/controlmenu.gd" id="1_wcueh"]
+[ext_resource type="FontFile" uid="uid://brscic2q5cbna" path="res://assets/FOT-NewRodin Pro DB.otf" id="2_wcueh"]
+
+[node name="controlmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wcueh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 23.0
+offset_right = 1151.0
+offset_bottom = 75.0
+theme_override_fonts/font = ExtResource("1_v051c")
+theme_override_font_sizes/font_size = 36
+text = "controls"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tris" type="Node" parent="."]
+
+[node name="Label2" type="Label" parent="tris"]
+offset_left = 494.0
+offset_top = 259.0
+offset_right = 941.0
+offset_bottom = 311.0
+theme_override_fonts/font = ExtResource("1_v051c")
+theme_override_font_sizes/font_size = 36
+text = "z      x"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="tris"]
+offset_left = 170.0
+offset_top = 195.0
+offset_right = 617.0
+offset_bottom = 247.0
+theme_override_fonts/font = ExtResource("1_v051c")
+theme_override_font_sizes/font_size = 36
+text = "⌃"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="tris"]
+offset_left = 489.0
+offset_top = 67.0
+offset_right = 936.0
+offset_bottom = 119.0
+rotation = 1.5708
+theme_override_fonts/font = ExtResource("1_v051c")
+theme_override_font_sizes/font_size = 36
+text = "⌃"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="tris"]
+offset_left = 294.0
+offset_top = 514.0
+offset_right = 741.0
+offset_bottom = 566.0
+rotation = -1.5708
+theme_override_fonts/font = ExtResource("1_v051c")
+theme_override_font_sizes/font_size = 36
+text = "⌃"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="tris"]
+offset_left = 169.0
+offset_top = 262.0
+offset_right = 616.0
+offset_bottom = 314.0
+theme_override_fonts/font = ExtResource("2_wcueh")
+theme_override_font_sizes/font_size = 21
+text = "move"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="tris"]
+offset_left = 493.0
+offset_top = 320.0
+offset_right = 940.0
+offset_bottom = 372.0
+theme_override_fonts/font = ExtResource("2_wcueh")
+theme_override_font_sizes/font_size = 21
+text = "rotate"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="tris"]
+offset_left = 171.0
+offset_top = 128.0
+offset_right = 618.0
+offset_bottom = 180.0
+theme_override_fonts/font = ExtResource("2_wcueh")
+theme_override_font_sizes/font_size = 21
+text = "hard drop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label9" type="Label" parent="tris"]
+offset_left = 617.0
+offset_top = 381.0
+offset_right = 1064.0
+offset_bottom = 433.0
+rotation = 3.14159
+theme_override_fonts/font = ExtResource("1_v051c")
+theme_override_font_sizes/font_size = 36
+text = "⌃"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label10" type="Label" parent="tris"]
+offset_left = 171.0
+offset_top = 384.0
+offset_right = 618.0
+offset_bottom = 436.0
+theme_override_fonts/font = ExtResource("2_wcueh")
+theme_override_font_sizes/font_size = 21
+text = "soft drop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tale" type="Node" parent="."]
+
+[node name="Label2" type="Label" parent="tale"]
+visible = false
+offset_left = 490.0
+offset_top = 238.0
+offset_right = 937.0
+offset_bottom = 290.0
+theme_override_fonts/font = ExtResource("1_v051c")
+theme_override_font_sizes/font_size = 36
+text = "shift"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="tale"]
+visible = false
+offset_left = 170.0
+offset_top = 195.0
+offset_right = 617.0
+offset_bottom = 247.0
+theme_override_fonts/font = ExtResource("1_v051c")
+theme_override_font_sizes/font_size = 36
+text = "⌃"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="tale"]
+visible = false
+offset_left = 489.0
+offset_top = 67.0
+offset_right = 936.0
+offset_bottom = 119.0
+rotation = 1.5708
+theme_override_fonts/font = ExtResource("1_v051c")
+theme_override_font_sizes/font_size = 36
+text = "⌃"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="tale"]
+visible = false
+offset_left = 294.0
+offset_top = 514.0
+offset_right = 741.0
+offset_bottom = 566.0
+rotation = -1.5708
+theme_override_fonts/font = ExtResource("1_v051c")
+theme_override_font_sizes/font_size = 36
+text = "⌃"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="tale"]
+visible = false
+offset_left = 169.0
+offset_top = 262.0
+offset_right = 616.0
+offset_bottom = 314.0
+theme_override_fonts/font = ExtResource("2_wcueh")
+theme_override_font_sizes/font_size = 21
+text = "move"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="tale"]
+visible = false
+offset_left = 493.0
+offset_top = 293.0
+offset_right = 940.0
+offset_bottom = 345.0
+theme_override_fonts/font = ExtResource("2_wcueh")
+theme_override_font_sizes/font_size = 21
+text = "speed burst"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label9" type="Label" parent="tale"]
+visible = false
+offset_left = 617.0
+offset_top = 381.0
+offset_right = 1064.0
+offset_bottom = 433.0
+rotation = 3.14159
+theme_override_fonts/font = ExtResource("1_v051c")
+theme_override_font_sizes/font_size = 36
+text = "⌃"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pong" type="Node" parent="."]
+
+[node name="Label2" type="Label" parent="pong"]
+visible = false
+offset_left = 490.0
+offset_top = 261.0
+offset_right = 937.0
+offset_bottom = 313.0
+theme_override_fonts/font = ExtResource("1_v051c")
+theme_override_font_sizes/font_size = 36
+text = "shift"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="pong"]
+visible = false
+offset_left = 170.0
+offset_top = 195.0
+offset_right = 617.0
+offset_bottom = 247.0
+theme_override_fonts/font = ExtResource("1_v051c")
+theme_override_font_sizes/font_size = 36
+text = "⌃"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="pong"]
+visible = false
+offset_left = 169.0
+offset_top = 262.0
+offset_right = 616.0
+offset_bottom = 314.0
+theme_override_fonts/font = ExtResource("2_wcueh")
+theme_override_font_sizes/font_size = 21
+text = "move"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="pong"]
+visible = false
+offset_left = 493.0
+offset_top = 320.0
+offset_right = 940.0
+offset_bottom = 372.0
+theme_override_fonts/font = ExtResource("2_wcueh")
+theme_override_font_sizes/font_size = 21
+text = "speed burst"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label9" type="Label" parent="pong"]
+visible = false
+offset_left = 617.0
+offset_top = 381.0
+offset_right = 1064.0
+offset_bottom = 433.0
+rotation = 3.14159
+theme_override_fonts/font = ExtResource("1_v051c")
+theme_override_font_sizes/font_size = 36
+text = "⌃"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 453.0
+offset_top = 84.0
+offset_right = 691.0
+offset_bottom = 107.0
+theme_override_colors/font_color = Color(0.703808, 0.703808, 0.703808, 1)
+theme_override_fonts/font = ExtResource("2_wcueh")
+theme_override_font_sizes/font_size = 11
+text = "press esc at any time to pause."
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 453.0
+offset_top = 455.0
+offset_right = 691.0
+offset_bottom = 634.4
+theme_override_colors/font_color = Color(0.703808, 0.703808, 0.703808, 1)
+theme_override_fonts/font = ExtResource("2_wcueh")
+theme_override_font_sizes/font_size = 11
+text = "press esc to go back
+
+
+
+
+
+
+
+
+
+
+
+press enter to start."
+horizontal_alignment = 1

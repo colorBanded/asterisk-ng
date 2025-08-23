@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://j6b24h8mukrs"]
+
+[ext_resource type="Script" uid="uid://jy0jflrut5da" path="res://scripts/piece_data.gd" id="1_hyddk"]
+[ext_resource type="Texture2D" uid="uid://d0aa5e3x0xqdn" path="res://monos/T.png" id="1_ohm5d"]
+
+[resource]
+script = ExtResource("1_hyddk")
+piece_texture = ExtResource("1_ohm5d")
+tetrimono_type = 2
+spawn_position = Vector2(0, 0)

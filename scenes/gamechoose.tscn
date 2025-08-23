@@ -4,8 +4,9 @@
 [ext_resource type="FontFile" uid="uid://brscic2q5cbna" path="res://assets/FOT-NewRodin Pro DB.otf" id="1_cjm32"]
 [ext_resource type="Script" uid="uid://cumkh8sdw37s1" path="res://scripts/gamechoose.gd" id="1_yavud"]
 [ext_resource type="Script" uid="uid://qciuem4i4r00" path="res://scripts/menu_fg.gd" id="2_ir7r2"]
-[ext_resource type="Script" uid="uid://dkcqfhew3g57y" path="res://scripts/btns/btn.gd" id="5_fjb6h"]
 [ext_resource type="FontFile" uid="uid://bocrogyb3eljc" path="res://assets/FOT-NewRodin Pro EB.otf" id="6_ijey6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fjb6h"]
 
 [node name="Gamechoose" type="Control"]
 layout_mode = 3
@@ -75,7 +76,6 @@ theme_override_font_sizes/font_size = 26
 text = "*ng"
 flat = true
 alignment = 0
-script = ExtResource("5_fjb6h")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -87,7 +87,6 @@ theme_override_font_sizes/font_size = 26
 text = "*tris"
 flat = true
 alignment = 0
-script = ExtResource("5_fjb6h")
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -99,11 +98,11 @@ theme_override_font_sizes/font_size = 26
 text = "*tale"
 flat = true
 alignment = 0
-script = ExtResource("5_fjb6h")
 
 [node name="VSeparator" type="VSeparator" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxEmpty_fjb6h")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -139,26 +138,51 @@ text = "DESCRIPTION"
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="next" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cjm32")
+text = "next"
+flat = true
+
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -40.0
-offset_right = 52.0
+offset_top = -55.0
+offset_right = 82.0
 grow_vertical = 0
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_bottom = 30
 
-[node name="back" type="Button" parent="MarginContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="back" type="Button" parent="MarginContainer2/HBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_cjm32")
 theme_override_font_sizes/font_size = 16
 text = "back"
 flat = true
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 596.0
+offset_right = 473.0
+offset_bottom = 619.0
+theme_override_fonts/font = ExtResource("1_cjm32")
+text = "currently only *tris is in progress!"
+
+[connection signal="focus_entered" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/ng" to="." method="_on_ng_focus_entered"]
 [connection signal="mouse_entered" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/ng" to="." method="_on_ng_mouse_entered"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/ng" to="." method="_on_ng_pressed"]
+[connection signal="focus_entered" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer2/tris" to="." method="_on_tris_focus_entered"]
 [connection signal="mouse_entered" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer2/tris" to="." method="_on_tris_mouse_entered"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer2/tris" to="." method="_on_tris_pressed"]
+[connection signal="focus_entered" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer3/tale" to="." method="_on_tale_focus_entered"]
 [connection signal="mouse_entered" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer3/tale" to="." method="_on_tale_mouse_entered"]
 [connection signal="mouse_exited" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer3/tale" to="." method="_on_tale_mouse_exited"]
-[connection signal="pressed" from="MarginContainer2/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer3/tale" to="." method="_on_tale_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer2/next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="MarginContainer2/HBoxContainer/back" to="." method="_on_back_pressed"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://debqaimdsqypv"]
+
+[ext_resource type="Script" uid="uid://dr08chbp5oo0f" path="res://scripts/ghost_tetrimono.gd" id="1_b32if"]
+
+[node name="GhostTetrimono" type="Node2D"]
+script = ExtResource("1_b32if")

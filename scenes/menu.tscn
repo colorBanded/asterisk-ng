@@ -26,6 +26,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -132.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
@@ -43,8 +44,9 @@ offset = Vector2(0, 36.09)
 script = ExtResource("2_4ytvr")
 
 [node name="MenuRed" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0.243137)
 texture_filter = 1
-position = Vector2(-39, -18)
+position = Vector2(-40, -34)
 scale = Vector2(5.34, 5.34)
 texture = ExtResource("3_4ytvr")
 centered = false
